@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>
+        My First Website
+    </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+        
+     <style>
+        .row{
+            width:720px;
+            margin: 10px auto 10px auto ;
+        }
+        .image-container {
+            display: table-cell;
+             vertical-align: middle;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<!--here is the background, if I want to change I can change it-->
+<body style="background-color: rgb(255, 255, 255);">
+
+    <h1>
+    Welcome to the community!
+    </h1>
+
+<!--below are the images-->
+<div class="row">
+    <div class="image-container"><img id="female" src="img/Image1.png" onmouseover="this.src='img/Image11.png';" onmouseout="this.src='img/Image1.png';" width="200" height="200"/></div>
+    <div class="image-container"><img id="male" src="img/Image2.png" onmouseover="this.src='img/Image22.png';" onmouseout="this.src='img/Image2.png';" width="200" height="200"/></div>
+    <div class="image-container"><img id="children" src="img/Image3.png" onmouseover="this.src='img/Image33.png';" onmouseout="this.src='img/Image3.png';" width="200" height="200"/></div>
+ </div>
+
+
+ <div class="row">
+    <div class="image-container"><img id="elder" src="img/Image4.png" onmouseover="this.src='img/Image44.png';" onmouseout="this.src='img/Image4.png';" width="200" height="200"/></div>
+    <div class="image-container"><img id="bisexual" src="img/Image5.png" onmouseover="this.src='img/Image55.png';" onmouseout="this.src='img/Image5.png';" width="200" height="200"/></div>
+    <div class="image-container"><img id="gay" src="img/Image6.png" onmouseover="this.src='img/Image66.png';" onmouseout="this.src='img/Image6.png';" width="200" height="200"/></div>
+ </div>
+
+
+ <div class="row">
+    <div class="image-container"><img id="lesbian" src="img/Image7.png" onmouseover="this.src='img/Image77.png';" onmouseout="this.src='img/Image7.png';" width="200" height="200"/></div>
+    <div class="image-container"><img id="animal" src="img/Image8.png" onmouseover="this.src='img/Image88.png';" onmouseout="this.src='img/Image8.png';" width="200" height="200"/></div>
+    <div class="image-container"><img id="plant" src="img/Image9.png" onmouseover="this.src='img/Image99.png';" onmouseout="this.src='img/Image9.png';" width="200" height="200"/></div>
+ </div>
+
+<!--below are the sounds-->
+ <script>
+    var sound1 = new buzz.sound("sound/female.mp3");
+    var sound2 = new buzz.sound("sound/male.wav");
+    var sound3 = new buzz.sound("sound/children.wav");
+    var sound4 = new buzz.sound("sound/elder.wav");
+    var sound5 = new buzz.sound("sound/bisexual.wav");
+    var sound6 = new buzz.sound("sound/gay.wav");
+    var sound7 = new buzz.sound("sound/lesbian.wav");
+    var sound8 = new buzz.sound("sound/animal.wav");
+    var sound9 = new buzz.sound("sound/plant.wav");
+
+    window.onload = function() {
+        document.getElementById('female').addEventListener('mouseover', function () {sound1.play(); });
+        document.getElementById('male').addEventListener('mouseover', function () {sound2.play(); });
+        document.getElementById('children').addEventListener('mouseover', function () {sound3.play(); });
+        document.getElementById('elder').addEventListener('mouseover', function () {sound4.play(); });
+        document.getElementById('bisexual').addEventListener('mouseover', function () {sound5.play(); });
+        document.getElementById('gay').addEventListener('mouseover', function () {sound6.play(); });
+        document.getElementById('lesbian').addEventListener('mouseover', function () {sound7.play(); });
+        document.getElementById('animal').addEventListener('mouseover', function () {sound8.play(); });
+        document.getElementById('plant').addEventListener('mouseover', function () {sound9.play(); });
+    };
+</script>
+
+
+
+</body>
+
+
+</html>
